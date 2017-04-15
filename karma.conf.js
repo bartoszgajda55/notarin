@@ -50,7 +50,7 @@ module.exports = function (config) {
   });
 
   if(process.env.TRAVIS){
-    configuration.browsers = ['Chrome_travis_ci'];
-    configuration.singleRun = true;
+    config.browsers = ['Chrome_travis_ci'];
+    config.singleRun = true;
   }
 };
