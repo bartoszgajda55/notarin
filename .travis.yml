@@ -9,6 +9,9 @@ branches:
   only:
   - develop
   - master
+  
+notifications:
+  email: false
 
 before_install:
  - export CHROME_BIN=/usr/bin/google-chrome
