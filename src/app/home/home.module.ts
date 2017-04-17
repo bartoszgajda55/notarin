@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
-import {MainComponent} from "./components/main/main.component";
+import {LandingPageComponent} from "./components/landing-page/landing-page.component";
 
 @NgModule({
   imports: [
@@ -10,7 +10,7 @@ import {MainComponent} from "./components/main/main.component";
     HomeRoutingModule
   ],
   declarations: [
-    MainComponent
+    LandingPageComponent
   ]
 })
 export class HomeModule { }
