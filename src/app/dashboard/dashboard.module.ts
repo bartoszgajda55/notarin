@@ -5,7 +5,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MainComponent } from './components/main/main.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
-import { DefaultComponent } from './components/default/default.component';
+import { OverviewComponent } from './components/overview/overview.component';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import { DefaultComponent } from './components/default/default.component';
     MainComponent,
     NavbarComponent,
     HeaderComponent,
-    DefaultComponent
+    OverviewComponent
   ]
 })
 export class DashboardModule { }
