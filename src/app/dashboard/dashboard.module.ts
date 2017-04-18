@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { MainComponent } from './components/main/main.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DefaultComponent } from './components/default/default.component';
 
 @NgModule({
   imports: [
@@ -12,7 +14,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   declarations: [
     MainComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent,
+    DefaultComponent
   ]
 })
 export class DashboardModule { }
