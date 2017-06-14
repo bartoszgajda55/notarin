@@ -16,7 +16,32 @@
           </div>
         </div>
         <div class="inner cover">
-          <p>Tu bedzie formularz logowania</p>
+          <h1>Log In</h1>
+          <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+            <div class="input-group col-md-7 col-md-offset-2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                ngModel
+                required>
+            </div>
+            <div class="input-group col-md-7 col-md-offset-2">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Password"
+                ngModel
+                required>
+            </div>
+            <div class="input-group col-md-offset-2">
+              <input type="submit" [disabled]="loginForm.invalid" class="form-control btn" value="Log In">
+            </div>
+          </form>
         </div>
         <div class="mastfoot">
           <div class="inner">
