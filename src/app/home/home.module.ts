@@ -6,11 +6,13 @@ import {LandingPageComponent} from "./components/landing-page/landing-page.compo
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import {LoginService} from "./services/login/login.service";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule
   ],
   declarations: [
     LandingPageComponent,
