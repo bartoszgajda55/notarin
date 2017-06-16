@@ -1,0 +1,54 @@
+<main>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand"><a routerLink="/">Notarin.io</a></h3>
+            <nav>
+              <ul class="nav masthead-nav">
+                <li><a routerLink="">Home</a></li>
+                <li><a>Features</a></li>
+                <li routerLinkActive="active"><a routerLink="/login">Log In</a></li>
+                <li routerLinkActive="active"><a routerLink="/register">Register</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="inner cover">
+          <h1>Log In</h1>
+          <form #loginForm="ngForm" (ngSubmit)="onLogin()">
+            <div class="input-group col-md-7 col-md-offset-2">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Email"
+                ngModel
+                required>
+            </div>
+            <div class="input-group col-md-7 col-md-offset-2">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Password"
+                ngModel
+                required>
+            </div>
+            <div class="input-group col-md-offset-2">
+              <input type="submit" [disabled]="loginForm.invalid" class="form-control btn" value="Log In">
+            </div>
+          </form>
+        </div>
+        <div class="mastfoot">
+          <div class="inner">
+            <p>Cover template for Notarin.io</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

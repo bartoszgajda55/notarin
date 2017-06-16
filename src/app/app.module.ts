@@ -5,20 +5,23 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {HomeModule} from "./home/home.module";
+import {DashboardModule} from "./dashboard/dashboard.module";
+import {AngularFireModule} from "angularfire2";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
-    DashboardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule,
+    DashboardModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
