@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HomeModule} from "./home/home.module";
 import {DashboardModule} from "./dashboard/dashboard.module";
+import {AngularFireModule} from "angularfire2";
+import {environment} from "../environments/environment";
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import {DashboardModule} from "./dashboard/dashboard.module";
     HttpModule,
     AppRoutingModule,
     HomeModule,
-    DashboardModule
+    DashboardModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
   bootstrap: [AppComponent]
