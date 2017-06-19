@@ -5,10 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import {LandingPageComponent} from "./components/landing-page/landing-page.component";
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import {LoginService} from "./services/login/login.service";
 import {FormsModule} from "@angular/forms";
-import {AngularFireAuth, AngularFireAuthModule} from "angularfire2/auth";
-import {RegisterService} from "./services/register/register.service";
+import {AngularFireAuthModule} from "angularfire2/auth";
 
 @NgModule({
   imports: [
@@ -22,9 +20,6 @@ import {RegisterService} from "./services/register/register.service";
     RegisterComponent,
     LoginComponent
   ],
-  providers: [
-    LoginService,
-    RegisterService
-  ]
+  providers: []
 })
 export class HomeModule { }
