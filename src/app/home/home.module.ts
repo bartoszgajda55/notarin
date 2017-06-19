@@ -7,18 +7,24 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import {LoginService} from "./services/login/login.service";
 import {FormsModule} from "@angular/forms";
+import {AngularFireAuth, AngularFireAuthModule} from "angularfire2/auth";
+import {RegisterService} from "./services/register/register.service";
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireAuthModule
   ],
   declarations: [
     LandingPageComponent,
     RegisterComponent,
     LoginComponent
   ],
-  providers: [LoginService]
+  providers: [
+    LoginService,
+    RegisterService
+  ]
 })
 export class HomeModule { }
