@@ -106,6 +106,9 @@ main {
 
 .cover {
   padding: 0 20px;
+  background-color: rgb(71,71,71);
+  border: 1px solid rgb(91, 91, 91);
+  border-radius: 10px;
 }
 .cover .btn-lg {
   padding: 10px 20px;

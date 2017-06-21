@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from "@angular/forms";
 import {AngularFireAuthModule} from "angularfire2/auth";
 import {RouterModule} from "@angular/router";
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import {RouterModule} from "@angular/router";
   declarations: [
     LandingPageComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   providers: []
 })

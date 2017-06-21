@@ -1,28 +1,27 @@
-<div class="inner cover">
-  <h1>Log In</h1>
-  <form #loginForm="ngForm" (ngSubmit)="onLogin()">
-    <div class="input-group col-md-7 col-md-offset-2">
-      <input
-        type="email"
-        id="email"
-        name="email"
-        class="form-control"
-        placeholder="Email"
-        [(ngModel)]="email"
-        required>
-    </div>
-    <div class="input-group col-md-7 col-md-offset-2">
-      <input
-        type="password"
-        id="password"
-        name="password"
-        class="form-control"
-        placeholder="Password"
-        [(ngModel)]="password"
-        required>
-    </div>
-    <div class="input-group col-md-offset-2">
-      <input type="submit" [disabled]="loginForm.invalid" class="form-control btn" value="Log In">
-    </div>
-  </form>
-</div>
+<h1>Log In</h1>
+<form #loginForm="ngForm" (ngSubmit)="onLogin()">
+  <div class="input-group col-md-7 col-md-offset-2">
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      placeholder="Email"
+      [(ngModel)]="email"
+      required>
+  </div>
+  <div class="input-group col-md-7 col-md-offset-2">
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="form-control"
+      placeholder="Password"
+      [(ngModel)]="password"
+      required>
+  </div>
+  <div class="input-group col-md-offset-2">
+    <input type="submit" [disabled]="loginForm.invalid" class="form-control btn" value="Log In">
+  </div>
+</form>
+
