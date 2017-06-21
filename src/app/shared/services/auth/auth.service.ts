@@ -16,21 +16,21 @@ export class AuthService {
   }
 
   loginUserWithEmail(email: string, password: string) {
-    this.afAuth.auth.signInWithEmailAndPassword(email, password).catch(e => {
+    this.afAuth.auth.signInWithEmailAndPassword(email, password).then(() => {
+      this.router.navigate(['/dashboard']);
+    }).catch(e => {
       if(e) {
         console.log(e);
       }
-    }).then(() => {
-      this.router.navigate(['/dashboard']);
     });
   }
 
   registerUserWithEmail(email: string, password: string) {
-    this.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(e => {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password).then(() => {
+      this.router.navigate(['/dashboard']);
+    }).catch(e => {
       if(e)
         console.log(e);
-    }).then(() => {
-      this.router.navigate(['/dashboard']);
     });
   }
 
