@@ -8,9 +8,10 @@ import {HomeComponent} from "./home/components/home/home.component";
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent, children: [
-    {path: '', component: HomeComponent},
+    {path: 'home', component: HomeComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'register', component: RegisterComponent}
+    {path: 'register', component: RegisterComponent},
+    {path: '', redirectTo: 'home', pathMatch: 'full'}
   ]},
   {path: 'dashboard', component: MainComponent}
 ];
