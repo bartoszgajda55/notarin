@@ -5,20 +5,21 @@ import { HomeRoutingModule } from './home-routing.module';
 import {LandingPageComponent} from "./components/landing-page/landing-page.component";
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
-import {LoginService} from "./services/login/login.service";
 import {FormsModule} from "@angular/forms";
+import {AngularFireAuthModule} from "angularfire2/auth";
 
 @NgModule({
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireAuthModule
   ],
   declarations: [
     LandingPageComponent,
     RegisterComponent,
     LoginComponent
   ],
-  providers: [LoginService]
+  providers: []
 })
 export class HomeModule { }

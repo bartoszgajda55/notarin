@@ -9,6 +9,7 @@ import {HomeModule} from "./home/home.module";
 import {DashboardModule} from "./dashboard/dashboard.module";
 import {AngularFireModule} from "angularfire2";
 import {environment} from "../environments/environment";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {environment} from "../environments/environment";
     AppRoutingModule,
     HomeModule,
     DashboardModule,
+    SharedModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],
