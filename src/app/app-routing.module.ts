@@ -5,6 +5,7 @@ import {LoginComponent} from "./home/components/login/login.component";
 import {RegisterComponent} from "./home/components/register/register.component";
 import {MainComponent} from "./dashboard/components/main/main.component";
 import {HomeComponent} from "./home/components/home/home.component";
+import {OverviewComponent} from "./dashboard/components/overview/overview.component";
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent, children: [
@@ -13,7 +14,10 @@ const routes: Routes = [
     {path: 'register', component: RegisterComponent},
     {path: '', redirectTo: 'home', pathMatch: 'full'}
   ]},
-  {path: 'dashboard', component: MainComponent}
+  {path: 'dashboard', component: MainComponent, children: [
+    {path: 'overview', component: OverviewComponent},
+    {path: '', redirectTo: 'overview', pathMatch: 'full'}
+  ]}
 ];
 
 @NgModule({
