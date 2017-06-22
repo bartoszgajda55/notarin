@@ -19,8 +19,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.user = this.authService.getLoggedUser().subscribe((data) => {
-      this.userName = data.toJSON().displayName;
-      console.log(data);
+      if (data)
+        this.userName = data.toJSON().displayName;
+      console.log("OnInit: " + data);
     });
   }
 
@@ -30,8 +31,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   onLogData() {
-    this.authService.getLoggedUser().subscribe((data) => {
-      console.log(data);
+    this.user = this.authService.getLoggedUser().subscribe((data) => {
+      console.log("OnLog: " + data);
     });
   }
 
