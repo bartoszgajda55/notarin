@@ -20,20 +20,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.user = this.authService.getLoggedUser().subscribe((data) => {
       if (data)
-        this.userName = data.toJSON().displayName;
-      console.log("OnInit: " + data);
+        this.userName = data.displayName;
     });
   }
 
   onLogout() {
     this.authService.logOutUser();
     this.router.navigate(['/login']);
-  }
-
-  onLogData() {
-    this.user = this.authService.getLoggedUser().subscribe((data) => {
-      console.log("OnLog: " + data);
-    });
   }
 
   ngOnDestroy() {

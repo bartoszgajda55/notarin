@@ -3,7 +3,6 @@ import {AngularFireAuth} from "angularfire2/auth";
 import {Router} from "@angular/router";
 import {Observable} from "rxjs/Observable";
 import * as firebase from 'firebase/app';
-import 'rxjs';
 
 @Injectable()
 export class AuthService {
@@ -32,7 +31,7 @@ export class AuthService {
     this.afAuth.auth.signOut();
   }
 
-  getLoggedUser(): Observable<any> {
+  getLoggedUser(): Observable<firebase.User> {
     return this.user;
   }
 }
