@@ -34,4 +34,8 @@ export class AuthService {
   getLoggedUser(): Observable<firebase.User> {
     return this.user;
   }
+
+  isUserLoggedIn() {
+    return this.afAuth.auth.currentUser;
+  }
 }
