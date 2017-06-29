@@ -6,6 +6,7 @@ import {RegisterComponent} from "./home/components/register/register.component";
 import {MainComponent} from "./dashboard/components/main/main.component";
 import {HomeComponent} from "./home/components/home/home.component";
 import {OverviewComponent} from "./dashboard/components/overview/overview.component";
+import {AuthGuard} from "./shared/guards/auth.guard";
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent, children: [
@@ -14,7 +15,7 @@ const routes: Routes = [
     {path: 'register', component: RegisterComponent},
     {path: '', redirectTo: 'home', pathMatch: 'full'}
   ]},
-  {path: 'dashboard', component: MainComponent, children: [
+  {path: 'dashboard', component: MainComponent, canActivate: [AuthGuard], children: [
     {path: 'overview', component: OverviewComponent},
     {path: '', redirectTo: 'overview', pathMatch: 'full'}
   ]}
