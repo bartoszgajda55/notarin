@@ -9,6 +9,7 @@ import {Subscription} from "rxjs/Subscription";
 })
 export class SettingsComponent implements OnInit, OnDestroy {
   private sub: Subscription;
+  private user: Object
 
   constructor(
     private authService: AuthService
@@ -16,7 +17,8 @@ export class SettingsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.authService.getLoggedUser().subscribe((value) => {
-
+      this.user = value.toJSON();
+      console.log(this.user['email']);
     });
   }
 
