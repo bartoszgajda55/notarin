@@ -1,6 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {AuthService} from "../../../shared/services/auth/auth.service";
 import {Subscription} from "rxjs/Subscription";
+import {User} from 'app/shared/models/user';
 
 @Component({
   selector: 'app-settings',
@@ -9,7 +10,7 @@ import {Subscription} from "rxjs/Subscription";
 })
 export class SettingsComponent implements OnInit, OnDestroy {
   private sub: Subscription;
-  private user: Object
+  private user: User;
 
   constructor(
     private authService: AuthService
@@ -17,8 +18,8 @@ export class SettingsComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.authService.getLoggedUser().subscribe((value) => {
-      this.user = value.toJSON();
-      console.log(this.user['email']);
+      this.user = new User(value.toJSON()['providerData'][0]);
+      console.log(this.user);
     });
   }
 
