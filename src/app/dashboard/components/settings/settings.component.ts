@@ -19,7 +19,6 @@ export class SettingsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.authService.getLoggedUser().subscribe((value) => {
       this.user = new User(value.toJSON()['providerData'][0]);
-      console.log(this.user);
     });
   }
 
