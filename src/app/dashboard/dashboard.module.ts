@@ -6,6 +6,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import {RouterModule} from "@angular/router";
+import { SettingsComponent } from './components/settings/settings.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import {RouterModule} from "@angular/router";
     MainComponent,
     NavbarComponent,
     HeaderComponent,
-    OverviewComponent
+    OverviewComponent,
+    SettingsComponent
   ]
 })
 export class DashboardModule { }
