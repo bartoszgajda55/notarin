@@ -10,6 +10,7 @@ import {DashboardModule} from "./dashboard/dashboard.module";
 import {AngularFireModule} from "angularfire2";
 import {environment} from "../environments/environment";
 import {SharedModule} from "./shared/shared.module";
+import {AuthGuard} from "./shared/guards/auth.guard";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import {SharedModule} from "./shared/shared.module";
     SharedModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
