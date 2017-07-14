@@ -5,7 +5,6 @@ import {LandingPageComponent} from "./components/landing-page/landing-page.compo
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from "@angular/forms";
-import {AngularFireAuthModule} from "angularfire2/auth";
 import {RouterModule} from "@angular/router";
 import { HomeComponent } from './components/home/home.component';
 
@@ -13,7 +12,6 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     CommonModule,
     FormsModule,
-    AngularFireAuthModule,
     RouterModule
   ],
   declarations: [
