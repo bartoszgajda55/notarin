@@ -10,11 +10,13 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { InsComponent } from './components/ins/ins.component';
 import { OutsComponent } from './components/outs/outs.component';
 import {InsService} from "./services/ins/ins.service";
+import {AngularFireDatabaseModule} from "angularfire2/database";
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    AngularFireDatabaseModule
   ],
   declarations: [
     MainComponent,

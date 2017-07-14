@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {InsService} from "../../services/ins/ins.service";
 
 @Component({
   selector: 'app-ins',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private insService: InsService
+  ) { }
 
   ngOnInit() {
+    this.insService.createIn(24);
   }
 
 }

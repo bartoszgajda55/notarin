@@ -8,6 +8,8 @@ import {HomeComponent} from "./home/components/home/home.component";
 import {OverviewComponent} from "./dashboard/components/overview/overview.component";
 import {AuthGuard} from "./shared/guards/auth.guard";
 import {SettingsComponent} from "./dashboard/components/settings/settings.component";
+import {InsComponent} from "./dashboard/components/ins/ins.component";
+import {OutsComponent} from "./dashboard/components/outs/outs.component";
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent, children: [
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'dashboard', component: MainComponent, canActivate: [AuthGuard], children: [
     {path: 'overview', component: OverviewComponent},
     {path: 'settings', component: SettingsComponent},
+    {path: 'ins', component: InsComponent},
+    {path: 'outs', component: OutsComponent},
     {path: '', redirectTo: 'overview', pathMatch: 'full'}
   ]}
 ];
