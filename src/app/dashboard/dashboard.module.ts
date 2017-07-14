@@ -9,6 +9,7 @@ import {RouterModule} from "@angular/router";
 import { SettingsComponent } from './components/settings/settings.component';
 import { InsComponent } from './components/ins/ins.component';
 import { OutsComponent } from './components/outs/outs.component';
+import {InsService} from "./services/ins/ins.service";
 
 @NgModule({
   imports: [
@@ -23,6 +24,9 @@ import { OutsComponent } from './components/outs/outs.component';
     SettingsComponent,
     InsComponent,
     OutsComponent
+  ],
+  providers: [
+    InsService
   ]
 })
 export class DashboardModule { }
